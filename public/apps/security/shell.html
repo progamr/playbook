@@ -1,0 +1,38 @@
+<html ng-app="security">
+<head>
+    <title>Ode To Food</title>
+    <link href="../../css/bootstrap.css" rel="stylesheet" />
+    <link href="../../styles/animate.css" rel="stylesheet" />
+    <link href="../../styles/site.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav ng-include="'templates/nav.html'"></nav>
+
+<div class="container">
+    <div class="work-spinner">
+        <img src="/Apps/security/templates/ajax-loader.gif" />
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div ng-view></div>
+        </div>
+        <div class="col-md-4">
+            <alerts></alerts>
+        </div>
+    </div>
+</div>
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-animate/angular-route.min.js"></script>
+<script src="/bower_components/angular-route/angular-animate.min.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+
+<script src="module.js"></script>
+<script src="js/controllers/loginController.js"></script>
+<script src="js/controllers/secretController.js"></script>
+<script src="js/services/recipes.js"></script>
+
+
+</body>
+</html>

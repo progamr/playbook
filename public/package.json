@@ -1,0 +1,29 @@
+{
+  "name": "playbook",
+  "version": "1.0.0",
+  "description": "angular and laravel application with oauth, animation, form validation, and error handeling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progamr/playbook.git"
+  },
+  "keywords": [
+    "angularjs",
+    "laravel",
+    "spa",
+    "oauth",
+    "javascript",
+    "php",
+    "tokens",
+    "api"
+  ],
+  "author": "Amro Mohamed <prog.amr2014@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/progamr/playbook/issues"
+  },
+  "homepage": "https://github.com/progamr/playbook#readme"
+}

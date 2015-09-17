@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('security', ["common", "ngRoute", "ngAnimate", "ngMessages"]);
+    var app = angular.module('security', ['common', 'ngRoute', 'ngAnimate', 'ngMessages']);
 
     var routes = [
         {
@@ -19,8 +19,8 @@
         routes.forEach(function(route) {
             $routeProvider.when(route.url, route.settings);
         });
-        $routeProvider.otherwise({redirectTo : routes[o].url});
+        $routeProvider.otherwise({redirectTo : routes[0].url});
     };
 
-    app.config(registerRoutes());
-})();
+    app.config(function($routeProvider){registerRoutes($routeProvider)});
+}());

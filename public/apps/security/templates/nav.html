@@ -6,11 +6,12 @@
         <ul class="nav navbar-nav">
             <li><a href="#/secret">Secret recipe</a></li>
         </ul>
-        <div>
-            <div class="navbar-text navbar-right">
-                <button class="btn btn-default btn-sm">Sign Out</button>
+        <div ng-controller="loginController as login">
+            <div ng-show="login.user.loggedIn" class="navbar-text navbar-right">
+                Hello {{ login.user.username }}
+                <button ng-click="login.signOut()" class="btn btn-default btn-sm">Sign Out</button>
             </div>
-            <form  name="loginForm" class="navbar-form navbar-right"
+            <form ng-if="!login.user.loggedIn" ng-submit="login.login(loginForm)" name="loginForm" class="navbar-form navbar-right"
                   >
                 <div class="form-group">
                     <input name="username" type="text" placeholder="Username" />

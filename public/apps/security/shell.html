@@ -11,7 +11,7 @@
 
 <div class="container">
     <div class="work-spinner">
-        <img src="/Apps/security/templates/ajax-loader.gif" />
+        <img src="/apps/security/templates/ajax-loader.gif" />
     </div>
     <div class="row">
         <div class="col-md-8">
@@ -24,15 +24,18 @@
 </div>
 
 <script src="/bower_components/angular/angular.min.js"></script>
-<script src="/bower_components/angular-animate/angular-route.min.js"></script>
-<script src="/bower_components/angular-route/angular-animate.min.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
 <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
 
-<script src="module.js"></script>
-<script src="js/controllers/loginController.js"></script>
-<script src="js/controllers/secretController.js"></script>
-<script src="js/services/recipes.js"></script>
+<script src="/apps/common/module.js"></script>
+<script src="/apps/common/js/services/oauth.js"></script>
+<script src="/apps/common/js/services/currentUser.js"></script>
+<script src="/apps/common/js/services/alerting.js"></script>
 
+<script src="module.js"></script>
+<script src="/apps/security/js/controllers/loginController.js"></script>
+<script src="/apps/security/js/controllers/secretController.js"></script>
 
 </body>
 </html>

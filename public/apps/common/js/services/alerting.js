@@ -3,7 +3,7 @@
     var alerting = function($timeout) {
 
         var errorHandler = function() {
-            
+
         };
         return {
             errorHandler : errorHandler

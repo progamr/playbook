@@ -1,5 +1,4 @@
 ﻿<div ng-controller="loginController as login">
-    <p style="background-color: red;width: 100px;">username {{login.username}}</p>
     <form ng-if="!nav.user.loggedIn" name="loginForm" ng-submit="login.login(loginForm)" novalidate>
         <div class="form-group">
             <label>Userdname</label>

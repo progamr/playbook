@@ -15,3 +15,4 @@ Route::get('/', function () {
  * ------------------------------------------------
  */
 Route::post('/login', 'Auth\AuthController@login');
+Route::get('/secret', 'applicationController@getSecret');

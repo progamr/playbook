@@ -8,11 +8,16 @@
 
         model.login = function(form) {
             if(form.$valid) {
+                console.log(model.username);
                 oauth.login(model.username, model.password)
                     .catch(alerting.errorHandler('could not login'));
                 model.username = model.password = '';
                 form.$setUntouched();
             }
+        };
+
+        model.signOut = function() {
+
         };
 
 

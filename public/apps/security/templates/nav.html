@@ -14,10 +14,10 @@
             <form ng-if="!login.user.loggedIn" ng-submit="login.login(loginForm)" name="loginForm" class="navbar-form navbar-right"
                   >
                 <div class="form-group">
-                    <input name="username" type="text" placeholder="Username" />
+                    <input name="username" type="text" placeholder="Username" class="form-control" ng-model="login.username" required />
                 </div>
                 <div class="form-group">
-                    <input name="password" type="password" placeholder="Password" />
+                    <input name="password" type="password" placeholder="Password" class="form-control" ng-model="login.password" required />
                 </div>
                 <input class="btn btn-default btn-sm" type="submit" value="Login" />
             </form>

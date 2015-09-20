@@ -2,18 +2,28 @@
 
     // implementation details
     var loginRedirect = function($q, $location) {
+
+        var lastPath = '/';
         var responseError = function(response) {
-            if(response.status == 400) {
+
+            if( response.status == 400 || response.status == 401 ) {
                 // redirect to another route
+                lastPath = $location.path();
                 $location.path('/login');
             }
-            console.log(response.status);
             // reject the response and deliver it to any one else that was listening to this rejection
             return $q.reject(response);
         };
+
+        var redirectPostLogin = function() {
+            $location.path(lastPath);
+            lastPath = '/';
+        };
+
         // public API to be returned
         return {
-            responseError : responseError
+            responseError : responseError,
+            redirectPostLogin : redirectPostLogin
         };
     };
     module.factory('loginRedirect', loginRedirect);

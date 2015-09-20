@@ -1,7 +1,7 @@
 (function(module){
 
     // implementation details
-    var oauth = function($http, currentUser) {
+    var oauth = function($http, currentUser, $location) {
         var url = '/login';
         this.setUrl = function(newUrl) {
             url = newUrl;
@@ -23,9 +23,17 @@
                 });
         };
 
+        var logout = function () {
+            currentUser.profile.username = '';
+            currentUser.profile.token = '';
+            currentUser.remove();
+            $location.path('/login');
+        };
+
         // public API to be returned
         return {
-            login : login
+            login : login,
+            logout : logout
         };
     };
 

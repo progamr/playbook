@@ -1,7 +1,7 @@
 (function(module) {
 
 
-    var secretController = function(recipes) {
+    var secretController = function(recipes, $sce) {
         var model = this;
         model.recipe = {
             title : '',
@@ -9,6 +9,9 @@
             ingredients : [{name : '', quantity : null}]
         };
 
+        model.getTrustedTitle = function () {
+            return $sce.trustAsHtml(model.recipe.title);
+        };
         recipes.getSecret().then(function(data) {
             model.recipe = data.recipe;
             console.log(data.recipe);

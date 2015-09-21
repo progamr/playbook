@@ -14,10 +14,10 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="/apps/security/shell.html">Security</a></li>
-            <li><a href="Apps/diagnostics/shell.html">Diagnostics</a></li>
-            <li><a href="Apps/ui/shell.html">UI</a></li>
-            <li><a href="Apps/forms/shell.html">Forms</a></li>
-            <li><a href="Apps/integration/shell.html">Integration</a></li>
+            <li><a href="/apps/diagnostics/shell.html">Diagnostics</a></li>
+            <li><a href="/apps/ui/shell.html">UI</a></li>
+            <li><a href="/apps/forms/shell.html">Forms</a></li>
+            <li><a href="/apps/integration/shell.html">Integration</a></li>
         </ul>
     </div>
 </nav>

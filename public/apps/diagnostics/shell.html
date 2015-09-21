@@ -20,12 +20,12 @@
             <div>
                 <h4>Alerts</h4>
                 <div class="form-group">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" ng-model="model.alertMessage"/>
                 </div>
                 <div class="form-group">
-                    <select class="form-control"></select>
+                    <select class="form-control" ng-model="model.alertType" ng-options="type for type in model.alertTypes"></select>
                 </div>
-                <button class="btn btn-default btn-lg">Create Alert</button>
+                <button class="btn btn-default btn-lg" ng-click="model.createAlert()">Create Alert</button>
             </div>
             <hr/>
             <div>
@@ -44,8 +44,8 @@
 <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
 
 <script src="/apps/common/module.js"></script>
-<script src="/apps/common/js/services/alerts.js"></script>
 <script src="/apps/common/js/services/alerting.js"></script>
+<script src="/apps/common/js/directives/alerts.js"></script>
 <script src="/apps/common/js/services/requestCounter.js"></script>
 <script src="/apps/common/js/services/workSpinner.js"></script>
 <script src="/apps/common/js/services/exceptionHandler.js"></script>

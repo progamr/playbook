@@ -4,6 +4,8 @@
 
         var currentAlerts = [];
 
+        var alertTypes = ['success', 'info', 'warning', 'danger']
+
         var addWarning  = function (message) {
             addAlert('warning', message);
         };
@@ -20,8 +22,22 @@
             addAlert('success', message);
         };
 
-            var addAlert = function (type, message) {
-            currentAlerts.push({type : type, message : message});
+        var addAlert = function (type, message) {
+            var alert = {type : type, message : message};
+            currentAlerts.push(alert);
+            $timeout(function () {
+                removeAlert(alert);
+            }, 5000);
+        };
+
+        var removeAlert = function (alert) {
+            for(var i = 0; i < currentAlerts.length; i++){
+                if(currentAlerts[i] === alert)
+                {
+                    currentAlerts.splice(i, 1);
+                    break;
+                }
+            }
         };
 
         var errorHandler = function() {
@@ -33,7 +49,9 @@
             addSuccess : addSuccess,
             addWarning : addWarning,
             addAlert : addAlert,
+            removeAlert : removeAlert,
             currentAlerts: currentAlerts,
+            alertTypes : alertTypes,
             errorHandler : errorHandler
         };
 

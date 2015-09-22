@@ -13,6 +13,11 @@
             model.alertMessage = '';
         };
 
+        model.createException = function (){
+            throw new Error('some thing has gone terribly wrong');
+        };
+
+
     };
     module.controller('errorProneController', errorProneController);
 }(angular.module('diagnostics')));

@@ -12,14 +12,12 @@
 <nav ng-include="'templates/nav.html'"></nav>
 
 <div class="container">
-    <div class="work-spinner">
-        <img src="/apps/security/templates/ajax-loader.gif" />
-    </div>
     <div class="row">
         <div class="col-md-8" ng-controller="errorProneController as model">
             <div>
                 <h4>Alerts</h4>
                 <div class="form-group">
+                    {{model.alertMessage.length}}
                     <input type="text" class="form-control" ng-model="model.alertMessage"/>
                 </div>
                 <div class="form-group">
@@ -34,6 +32,9 @@
             </div>
         </div>
         <div class="col-md-4">
+            <work-spinner>
+                <img src="/apps/security/templates/ajax-loader.gif"/>
+            </work-spinner>
             <alerts></alerts>
         </div>
     </div>
@@ -47,8 +48,9 @@
 <script src="/apps/common/js/services/alerting.js"></script>
 <script src="/apps/common/js/directives/alerts.js"></script>
 <script src="/apps/common/js/services/requestCounter.js"></script>
-<script src="/apps/common/js/services/workSpinner.js"></script>
+<script src="/apps/common/js/directives/workSpinner.js"></script>
 <script src="/apps/common/js/services/exceptionHandler.js"></script>
+<script src="/apps/common/js/services/interpolateDebug.js"></script>
 
 <script src="module.js"></script>
 <script src="/apps/diagnostics/js/controllers/errorProneController.js"></script>

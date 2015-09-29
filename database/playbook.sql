@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2015 at 01:34 PM
+-- Generation Time: Sep 29, 2015 at 09:35 AM
 -- Server version: 5.5.44-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.12
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `playbook`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employees`
+--
+
+CREATE TABLE IF NOT EXISTS `employees` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lastName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `rating` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `employees`
+--
+
+INSERT INTO `employees` (`id`, `firstName`, `lastName`, `rating`, `created_at`, `updated_at`) VALUES
+(1, 'amr', 'mohamed', 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'ali', 'ahmed', 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -63,7 +87,8 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_10_12_000000_create_users_table', 1),
 ('2015_09_19_122221_create_recipes_table', 2),
-('2015_09_19_122655_create_ingredients_table', 2);
+('2015_09_19_122655_create_ingredients_table', 2),
+('2015_09_28_192552_create_employees_table', 3);
 
 -- --------------------------------------------------------
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="ui">
+<head>
+    <link href="../../css/bootstrap.css" rel="stylesheet" />
+    <link href="../../styles/animate.css" rel="stylesheet" />
+    <link href="../../styles/site.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <nav ng-include="'templates/nav.html'"></nav>
+
+    <div class="container">
+        <div class="work-spinner">
+            <img src="/apps/security/templates/ajax-loader.gif"/>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <ui-view></ui-view>
+            </div>
+            <div class="col-md-4">
+                <alerts></alerts>
+            </div>
+        </div>
+    </div>
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script src="/apps/common/module.js"></script>
+<script src="/apps/common/js/services/alerting.js"></script>
+<script src="/apps/common/js/directives/alerts.js"></script>
+<script src="/apps/common/js/services/requestCounter.js"></script>
+<script src="/apps/common/js/directives/workSpinner.js"></script>
+<script src="/apps/common/js/services/exceptionHandler.js"></script>
+
+<script src="module.js"></script>
+<script src="/apps/ui/js/services/stateChangeErrors.js"></script>
+<script src="/apps/ui/js/services/confirmPromotion.js"></script>
+<script src="/apps/ui/js/controllers/adminController.js"></script>
+
+</body>
+</html>

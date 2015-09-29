@@ -40,8 +40,10 @@
             }
         };
 
-        var errorHandler = function() {
-
+        var errorHandler = function(description) {
+            return function () {
+                addDanger(description);
+            };
         };
         return {
             addDanger : addDanger,

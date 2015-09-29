@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Ingredient;
 use App\Recipe;
+use App\Employee;
 
 class applicationController extends Controller {
 
@@ -27,5 +28,9 @@ class applicationController extends Controller {
         $data['recipe'] = Recipe::find(1);
         $data['recipe']['ingredients'] = Ingredient::where('recipe_id', '=', Recipe::find(1)->id)->get();
         return response()->json($data);
+    }
+
+    public function getEmployees () {
+        return Employee::all();
     }
 }

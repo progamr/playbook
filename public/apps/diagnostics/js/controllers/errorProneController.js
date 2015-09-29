@@ -1,6 +1,6 @@
 (function (module) {
 
-    var errorProneController = function (alerting) {
+    var errorProneController = function (alerting, $http) {
 
         var model = this;
         model.alertTypes = alerting.alertTypes;
@@ -16,6 +16,10 @@
         model.createException = function (){
             throw new Error('some thing has gone terribly wrong');
         };
+
+        $http.get('/fdg').then(function () {
+
+        }).catch(alerting.errorHandler('failed to load data!'));
 
 
     };

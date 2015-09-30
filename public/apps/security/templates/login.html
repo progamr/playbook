@@ -1,5 +1,5 @@
 ﻿<div ng-controller="loginController as login">
-    <form ng-if="!nav.user.loggedIn" name="loginForm" ng-submit="login.login(loginForm)" novalidate>
+    <form ng-if="!login.user.loggedIn" name="loginForm" ng-submit="login.login(loginForm)" novalidate>
         <div class="form-group">
             <label>Userdname</label>
             <input name="username" type="text" placeholder="Username" class="form-control" ng-model="login.username" required />
@@ -10,4 +10,7 @@
         </div>
         <input class="btn btn-default" type="submit" value="Login" />
     </form>
+</div>
+<div class="col-md-4">
+    <alerts></alerts>
 </div>

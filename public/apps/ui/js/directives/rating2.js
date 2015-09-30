@@ -8,8 +8,8 @@
             },
             require : 'amrRating',
             templateUrl : 'templates/rating',
-            controller : amrRatingController,
-            link : function (scope, element, attributes) {
+            controller : "amrRatingController",
+            link : function (scope, element, attributes, controller) {
 
                 var min = parseInt(attributes.min  || "1");
                 var max = parseInt(attributes.max  || "10");

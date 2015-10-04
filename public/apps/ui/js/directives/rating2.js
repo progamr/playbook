@@ -7,7 +7,7 @@
                 value : '='
             },
             require : 'amrRating',
-            templateUrl : 'templates/rating.html',
+            templateUrl : '/apps/ui/templates/rating.html',
             controller : "amrRatingController",
             link : function (scope, element, attributes, controller) {
 

@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('forms', ['common', 'ngRoute', 'ngAnimate', 'ngMessages']);
+    var app = angular.module('forms', ['common', 'ui', 'ngRoute', 'ngAnimate', 'ngMessages']);
 
     var routes = [
         {

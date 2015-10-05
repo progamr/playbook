@@ -8,7 +8,7 @@
                 <div forminput>
                     <label for="username">Your user name:</label>
                     <input type="text" id="username" name="username" required placeholder="User name"
-                           ng-model="model.user.username" username starts-with="S">
+                           ng-model="model.user.username" username starts-with="S" required>
                 </div>
 
                 <div forminput>
@@ -25,7 +25,7 @@
 
                 <div forminput>
                     <label for="rating">Your rating:</label>
-                    <div style="background-color: #006600"><amr-rating name="rating" id="rating" value="model.user.rating" min="1" max="5"></amr-rating></div>
+                    <amr-rating name="rating" id="rating" value="model.user.rating" min="1" max="5"></amr-rating>
                 </div>
 
                 <div forminput>
